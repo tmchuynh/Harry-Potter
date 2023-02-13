@@ -6,22 +6,33 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: space-around;
-  justify-content: space-between;
   align-items: flex-start; }
 
 .card {
-  margin: 1rem;
+  margin: .5rem;
   position: relative; }
+  .card .card-header {
+    margin-left: 5rem; }
+  .card .card-body {
+    justify-content: center;
+    align-self: center;
+    text-align: center; }
+    .card .card-body .card-img-top {
+      width: 150px;
+      height: 200px;
+      object-fit: cover; }
+    .card .card-body .house {
+      position: absolute;
+      top: .5rem;
+      left: .5rem;
+      width: 5rem; }
 
-.card-img-top {
-  height: 25rem;
-  width: 15rem;
-  object-fit: cover; }
-
-.card-img-overlay {
-  position: absolute;
-  top: 12rem;
-  right: 0;
-  width: 100%;
-  padding: 0; }
+table {
+  height: 20rem;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  display: flex;
+  flex-direction: column; }
+  table td {
+    width: 8rem; }
