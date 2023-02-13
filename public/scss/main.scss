@@ -1,0 +1,19 @@
+.characters-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card {
+    margin: 1rem;
+}
+
+
+.card-img-top {
+    height: 25rem;
+    width: 15rem;
+    object-fit: cover;
+}
