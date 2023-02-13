@@ -16,8 +16,10 @@ function renderCharacters(characters) {
 
     var image = document.createElement("img");
     image.classList.add("card-img-top");
+    /* Checking if the character has an image. If it does, it will show the image, if not, it will show
+    the Hogwarts shield. */
     if (characters.image != "") {
-    image.src = characters.image;
+        image.src = characters.image;
     }
     else {
         image.src = "public/img/shield.png";
@@ -37,9 +39,17 @@ function renderCharacters(characters) {
     td.textContent = "House";
     tr_name.appendChild(td);
     var td_name = document.createElement("td");
-    td_name.textContent = characters.house;
+    /* Checking if the character has a house. If it does, it will show the house, if not, it will show
+    "Unknown". */
+    if (characters.house != "") {
+        td_name.textContent = characters.house;
+    }
+    else {
+        td_name.textContent = "Unknown";
+    }
     td_name.style.fontFamily = "'Cookie', cursive";
     td_name.style.fontSize = "1.5rem";
+    /* Changing the color of the house name depending on the house. */
     if (characters.house == "Gryffindor") {
         td_name.style.color = "#aa130d";
     }
@@ -62,7 +72,14 @@ function renderCharacters(characters) {
     td.textContent = "Gender";
     tr_name.appendChild(td);
     var td_name = document.createElement("td");
-    td_name.textContent = characters.gender;
+    /* Checking if the character has a gender. If it does, it will show the gender, if not, it will
+    show "Unknown". */
+    if (characters.gender != "") {
+        td_name.textContent = characters.gender;
+    }
+    else {
+        td_name.textContent = "Unknown";
+    }
     td_name.style.fontFamily = "'Cookie', cursive";
     td_name.style.fontSize = "1.5rem";
     tr_name.appendChild(td_name);
@@ -74,7 +91,14 @@ function renderCharacters(characters) {
     td.textContent = "Ancestry";
     tr_name.appendChild(td);
     var td_name = document.createElement("td");
-    td_name.textContent = characters.ancestry;
+    /* Checking if the character has an ancestry. If it does, it will show the ancestry, if not, it
+    will show "Unknown". */
+    if (characters.ancestry != "") {
+        td_name.textContent = characters.ancestry;
+    }
+    else {
+        td_name.textContent = "Unknown";
+    }
     td_name.style.fontFamily = "'Cookie', cursive";
     td_name.style.fontSize = "1.5rem";
     tr_name.appendChild(td_name);
@@ -86,6 +110,8 @@ function renderCharacters(characters) {
     td.textContent = "Wizardary";
     tr_name.appendChild(td);
     var td_name = document.createElement("td");
+    /* Checking if the character is a wizard or not. If it is, it will show a check mark, if not, it
+    will show an X. */
     if (characters.wizard) {
         td_name.innerHTML = "<i class=\"bi bi-check\"></i>";
     } else {
@@ -100,6 +126,14 @@ function renderCharacters(characters) {
     td.textContent = "Actor";
     tr_name.appendChild(td);
     var td_name = document.createElement("td");
+    /* Checking if the character has an actor. If it does, it will show the actor, if not, it will show
+    "Unknown". */
+    if (characters.actor != "") {
+        td_name.textContent = characters.actor;
+    }
+    else {
+        td_name.textContent = "Unknown";
+    }
     td_name.textContent = characters.actor;
     td_name.style.fontFamily = "'Cookie', cursive";
     td_name.style.fontSize = "1.5rem";
@@ -108,9 +142,11 @@ function renderCharacters(characters) {
 
     var tr_name = document.createElement("tr");
     var td = document.createElement("td");
-    td.style.fontWeight = "bold";    td.textContent = "Alive";
+    td.style.fontWeight = "bold"; td.textContent = "Alive";
     tr_name.appendChild(td);
     var td_name = document.createElement("td");
+    /* Checking if the character is alive or not. If it is, it will show a check mark, if not, it
+    will show an X. */
     if (characters.alive) {
         td_name.innerHTML = "<i class=\"bi bi-check\"></i>";
     } else {
@@ -121,6 +157,7 @@ function renderCharacters(characters) {
 
     var house = document.createElement("img");
     house.classList.add("house");
+    /* Checking the house of the character and depending on the house, it will show the house's logo. */
     if (characters.house == "Gryffindor") {
         house.src = "public/img/gryffindor.png";
     }
