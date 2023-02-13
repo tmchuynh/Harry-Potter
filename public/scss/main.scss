@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Julee&display=swap');
 
-.navbar-brand img {
-    height: 7rem;
-    width: 7rem;
+.navbar {
+    .navbar-brand img {
+        height: 7rem;
+        width: 7rem;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    a:hover {
+        text-decoration: none;
+        color: rgb(230, 39, 39);
+    }
 }
 
-.characters-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-}
+
+
 
 .card {
     margin: .25rem;
@@ -67,5 +72,26 @@ table {
         .bi-x {
             color: rgb(214, 27, 27);
         }
+    }
+}
+
+.characters-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.spells-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+        width: 20rem;
+        height: 12rem;
     }
 }

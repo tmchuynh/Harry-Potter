@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Julee&display=swap");
-.navbar-brand img {
+.navbar .navbar-brand img {
   height: 7rem;
   width: 7rem; }
 
-.characters-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center; }
+.navbar a {
+  text-decoration: none;
+  color: black; }
+
+.navbar a:hover {
+  text-decoration: none;
+  color: #e62727; }
 
 .card {
   margin: .25rem;
@@ -47,3 +48,20 @@ table {
       color: #0ec20e; }
     table td .bi-x {
       color: #d61b1b; }
+
+.characters-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center; }
+
+.spells-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+  .spells-container .card {
+    width: 20rem;
+    height: 12rem; }

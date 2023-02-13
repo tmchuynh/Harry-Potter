@@ -206,15 +206,3 @@ $.getJSON("https://hp-api.onrender.com/api/characters", function (data) {
     // alive = true | false
     // image
 })
-
-// =============================================================================================
-
-// const urlToFetch = "https://harry-potter-api-en.onrender.com/spells"
-
-// fetch(urlToFetch)
-// 	.then((res) => res.json())
-// 	.then((data) => {
-// 		// It brings all data at the API and it shows it at the console
-// 		console.log(data)
-// 	})
-// 	.catch((e) => console.log(e));
