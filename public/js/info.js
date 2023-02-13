@@ -28,39 +28,61 @@ function renderCharacters(characters) {
     table.classList.add("table");
     body.appendChild(table);
 
-
     var tbody = document.createElement("tbody");
     table.appendChild(tbody);
 
     var tr_name = document.createElement("tr");
     var td = document.createElement("td");
+    td.style.fontWeight = "bold";
     td.textContent = "House";
     tr_name.appendChild(td);
     var td_name = document.createElement("td");
     td_name.textContent = characters.house;
+    td_name.style.fontFamily = "'Cookie', cursive";
+    td_name.style.fontSize = "1.5rem";
+    if (characters.house == "Gryffindor") {
+        td_name.style.color = "#aa130d";
+    }
+    else if (characters.house == "Hufflepuff") {
+        td_name.style.color = "#e3bd0a";
+    }
+    else if (characters.house == "Ravenclaw") {
+        td_name.style.color = "#4191b4";
+    }
+    else if (characters.house == "Slytherin") {
+        td_name.style.color = "#19420d";
+    }
+
     tr_name.appendChild(td_name);
     tbody.appendChild(tr_name);
 
     var tr_name = document.createElement("tr");
     var td = document.createElement("td");
+    td.style.fontWeight = "bold";
     td.textContent = "Gender";
     tr_name.appendChild(td);
     var td_name = document.createElement("td");
     td_name.textContent = characters.gender;
+    td_name.style.fontFamily = "'Cookie', cursive";
+    td_name.style.fontSize = "1.5rem";
     tr_name.appendChild(td_name);
     tbody.appendChild(tr_name);
 
     var tr_name = document.createElement("tr");
     var td = document.createElement("td");
+    td.style.fontWeight = "bold";
     td.textContent = "Ancestry";
     tr_name.appendChild(td);
     var td_name = document.createElement("td");
     td_name.textContent = characters.ancestry;
+    td_name.style.fontFamily = "'Cookie', cursive";
+    td_name.style.fontSize = "1.5rem";
     tr_name.appendChild(td_name);
     tbody.appendChild(tr_name);
 
     var tr_name = document.createElement("tr");
     var td = document.createElement("td");
+    td.style.fontWeight = "bold";
     td.textContent = "Wizardary";
     tr_name.appendChild(td);
     var td_name = document.createElement("td");
@@ -74,16 +96,19 @@ function renderCharacters(characters) {
 
     var tr_name = document.createElement("tr");
     var td = document.createElement("td");
+    td.style.fontWeight = "bold";
     td.textContent = "Actor";
     tr_name.appendChild(td);
     var td_name = document.createElement("td");
     td_name.textContent = characters.actor;
+    td_name.style.fontFamily = "'Cookie', cursive";
+    td_name.style.fontSize = "1.5rem";
     tr_name.appendChild(td_name);
     tbody.appendChild(tr_name);
 
     var tr_name = document.createElement("tr");
     var td = document.createElement("td");
-    td.textContent = "Alive";
+    td.style.fontWeight = "bold";    td.textContent = "Alive";
     tr_name.appendChild(td);
     var td_name = document.createElement("td");
     if (characters.alive) {

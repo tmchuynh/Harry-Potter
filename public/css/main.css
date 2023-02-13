@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Julee&display=swap");
 .navbar-brand img {
   height: 7rem;
   width: 7rem; }
@@ -12,7 +13,10 @@
   margin: .5rem;
   position: relative; }
   .card .card-header {
-    margin-left: 5rem; }
+    margin-left: 5rem;
+    font-family: 'Julee', cursive;
+    font-size: 1.5rem;
+    font-weight: bold; }
   .card .card-body {
     justify-content: center;
     align-self: center;
@@ -39,6 +43,6 @@ table {
     table td i {
       font-size: 1.5rem; }
     table td .bi-check {
-      color: green; }
+      color: #0ec20e; }
     table td .bi-x {
-      color: red; }
+      color: #d61b1b; }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Julee&display=swap');
+
 .navbar-brand img {
     height: 7rem;
     width: 7rem;
@@ -16,6 +18,9 @@
 
     .card-header {
         margin-left: 5rem;
+        font-family: 'Julee', cursive;
+        font-size: 1.5rem;
+        font-weight: bold;
     }
 
     .card-body {
@@ -56,10 +61,10 @@ table {
             font-size: 1.5rem;
         }
         .bi-check {
-            color: green;
+            color: rgb(14, 194, 14);
         }
         .bi-x {
-            color: red;
+            color: rgb(214, 27, 27);
         }
     }
 }
