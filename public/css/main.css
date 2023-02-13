@@ -36,3 +36,9 @@ table {
   flex-direction: column; }
   table td {
     width: 8rem; }
+    table td i {
+      font-size: 1.5rem; }
+    table td .bi-check {
+      color: green; }
+    table td .bi-x {
+      color: red; }

@@ -16,7 +16,12 @@ function renderCharacters(characters) {
 
     var image = document.createElement("img");
     image.classList.add("card-img-top");
+    if (characters.image != "") {
     image.src = characters.image;
+    }
+    else {
+        image.src = "public/img/shield.png";
+    }
     body.appendChild(image);
 
     var table = document.createElement("table");
@@ -59,8 +64,8 @@ function renderCharacters(characters) {
     td.textContent = "Wizardary";
     tr_name.appendChild(td);
     var td_name = document.createElement("td");
-    if (characters.wizardary) {
-        td_name.innerHTML = "<i class=\"bi bi-check-lg\"></i>";
+    if (characters.wizard) {
+        td_name.innerHTML = "<i class=\"bi bi-check\"></i>";
     } else {
         td_name.innerHTML = "<i class=\"bi bi-x\"></i>";
     }
@@ -82,7 +87,7 @@ function renderCharacters(characters) {
     tr_name.appendChild(td);
     var td_name = document.createElement("td");
     if (characters.alive) {
-        td_name.innerHTML = "<i class=\"bi bi-check-lg\"></i>";
+        td_name.innerHTML = "<i class=\"bi bi-check\"></i>";
     } else {
         td_name.innerHTML = "<i class=\"bi bi-x\"></i>";
     }

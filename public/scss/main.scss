@@ -13,20 +13,22 @@
 .card {
     margin: .5rem;
     position: relative;
+
     .card-header {
         margin-left: 5rem;
     }
+
     .card-body {
         justify-content: center;
         align-self: center;
         text-align: center;
-    
+
         .card-img-top {
             width: 150px;
             height: 200px;
             object-fit: cover;
         }
-    
+
         .house {
             position: absolute;
             top: .5rem;
@@ -49,8 +51,15 @@ table {
 
     td {
         width: 8rem;
+
+        i {
+            font-size: 1.5rem;
+        }
+        .bi-check {
+            color: green;
+        }
+        .bi-x {
+            color: red;
+        }
     }
 }
-
-
-
