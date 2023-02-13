@@ -108,6 +108,9 @@ function renderCharacters(characters) {
     else if (characters.house == "Hufflepuff") {
         house.src = "public/img/hufflepuff.png";
     }
+    else {
+        house.src = "public/img/shield.png";
+    }
 
     body.appendChild(house);
 
