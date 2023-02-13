@@ -4,10 +4,25 @@ function characters(data) {
     var card = document.createElement("div");
     card.classList.add("card");
     characters_container.appendChild(card);
-    var img = document.createElement("img");
-    img.classList.add("card-img-top");
-    img.src = data.image;
-    card.appendChild(img);
+    var image = document.createElement("img");
+    image.classList.add("card-img-top");
+        image.src = data.image;
+    card.appendChild(image);
+    var overlay = document.createElement("img");
+    overlay.classList.add("card-img-overlay");
+    if (data.house == "Gryffindor") {
+        overlay.src = "public/img/gryffindor.png";
+    }
+    else if (data.house == "Hufflepuff") {
+        overlay.src = "public/img/hufflepuff.png";
+    }
+    else if (data.house == "Ravenclaw") {
+        overlay.src = "public/img/ravenclaw.png";
+    }
+    else if (data.house == "Slytherin") {
+        overlay.src = "public/img/slytherin.png";
+    }
+    card.appendChild(overlay);
     var body = document.createElement("div");
     body.classList.add("card-body");
     card.appendChild(body);
@@ -22,8 +37,8 @@ function characters(data) {
 
 }
 
-$.getJSON("https://hp-api.onrender.com/api/characters", function(data) {
-    
+$.getJSON("https://hp-api.onrender.com/api/characters", function (data) {
+
     console.log(data);
 
     for (var i = 0; i < data.length; i++) {
